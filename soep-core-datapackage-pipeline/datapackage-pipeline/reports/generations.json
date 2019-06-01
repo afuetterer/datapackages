@@ -1,0 +1,30 @@
+{
+    "time": 39.624,
+    "valid": true,
+    "error-count": 0,
+    "table-count": 1,
+    "tables": [
+        {
+            "time": 39.601,
+            "valid": true,
+            "error-count": 0,
+            "row-count": 320255,
+            "source": "inline",
+            "headers": [
+                "input_dataset",
+                "input_study",
+                "input_variable",
+                "input_version",
+                "output_dataset",
+                "output_study",
+                "output_variable",
+                "output_version"
+            ],
+            "format": "inline",
+            "schema": "table-schema",
+            "errors": []
+        }
+    ],
+    "warnings": [],
+    "preset": "table"
+}

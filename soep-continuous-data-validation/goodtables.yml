@@ -1,0 +1,3 @@
+datapackages:
+#  - data/soep-core-minimal/datapackage.json
+  - data/soep-core/datapackage.json

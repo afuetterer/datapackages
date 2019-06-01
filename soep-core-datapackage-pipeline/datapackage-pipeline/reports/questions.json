@@ -1,0 +1,38 @@
+{
+    "time": 0.153,
+    "valid": true,
+    "error-count": 0,
+    "table-count": 1,
+    "tables": [
+        {
+            "time": 0.151,
+            "valid": true,
+            "error-count": 0,
+            "row-count": 805,
+            "source": "inline",
+            "headers": [
+                "answer_list",
+                "concept",
+                "description",
+                "filter",
+                "goto",
+                "instruction",
+                "instruction_de",
+                "item",
+                "number",
+                "question",
+                "questionnaire",
+                "scale",
+                "study",
+                "template.id",
+                "text",
+                "text_de"
+            ],
+            "format": "inline",
+            "schema": "table-schema",
+            "errors": []
+        }
+    ],
+    "warnings": [],
+    "preset": "table"
+}

@@ -1,0 +1,59 @@
+{
+  "profile": "tabular-data-package",
+  "resources": [
+    {
+      "path": "data/datasets.csv",
+      "profile": "tabular-data-resource",
+      "name": "datasets",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "name",
+            "type": "string",
+            "format": "default"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "path": "data/variables.csv",
+      "profile": "tabular-data-resource",
+      "name": "variables",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "name",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "dataset",
+            "type": "string",
+            "format": "default"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "fields": "dataset",
+            "reference": {
+              "resource": "datasets",
+              "fields": "name"
+            }
+          }
+        ]
+      },
+      "missingValues": [
+        ""
+      ]
+    }
+  ]
+}

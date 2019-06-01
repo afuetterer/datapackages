@@ -1,0 +1,27 @@
+{
+    "time": 0.651,
+    "valid": true,
+    "error-count": 0,
+    "table-count": 1,
+    "tables": [
+        {
+            "time": 0.649,
+            "valid": true,
+            "error-count": 0,
+            "row-count": 7801,
+            "source": "inline",
+            "headers": [
+                "concept",
+                "label",
+                "label_de",
+                "topic",
+                "topic_prefix"
+            ],
+            "format": "inline",
+            "schema": "table-schema",
+            "errors": []
+        }
+    ],
+    "warnings": [],
+    "preset": "table"
+}

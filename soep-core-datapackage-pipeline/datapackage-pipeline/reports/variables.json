@@ -1,0 +1,29 @@
+{
+    "time": 7.523,
+    "valid": true,
+    "error-count": 0,
+    "table-count": 1,
+    "tables": [
+        {
+            "time": 7.518,
+            "valid": true,
+            "error-count": 0,
+            "row-count": 68206,
+            "source": "inline",
+            "headers": [
+                "ID",
+                "concept",
+                "dataset",
+                "item_id",
+                "source",
+                "study",
+                "varname"
+            ],
+            "format": "inline",
+            "schema": "table-schema",
+            "errors": []
+        }
+    ],
+    "warnings": [],
+    "preset": "table"
+}

@@ -1,0 +1,376 @@
+soep-core:
+  title: soep-core-pipeline
+  description: soep-core
+  pipeline:
+    # ===============================================
+    # Add metadata about datapackage
+    # ===============================================
+    -
+      run: add_metadata
+      parameters:
+        name: 'soep-core'
+        title: 'soep-core'
+        homepage: 'http://soep-core.org/'
+
+    # ===============================================
+    # Add resources
+    # ===============================================
+
+    # ===============================================
+    # Answers
+    # ===============================================
+    -
+      run: add_resource
+      parameters:
+        name: answers
+        format: csv
+        encoding: "utf-8"
+        url: https://raw.githubusercontent.com/kwenzig/soep-core/master/metadata/answers.csv
+        schema:
+          fields:
+            - name: study
+              type: string
+              format: default
+            - name: questionnaire
+              type: string
+              format: default
+            - name: answer_list
+              type: string
+              format: default
+            - name: value
+              type: string
+              format: default
+            - name: label_de
+              type: string
+              format: default
+            - name: label
+              type: string
+              format: default
+    # ===============================================
+    # Concepts
+    # ===============================================
+    -
+      run: add_resource
+      parameters:
+        name: concepts
+        format: csv
+        url: https://raw.githubusercontent.com/kwenzig/soep-core/master/metadata/concepts.csv
+        schema:
+          fields:
+          - name: concept
+            type: string
+            format: default
+          - name: topic
+            type: string
+            format: default
+          - name: topic_prefix
+            type: string
+            format: default
+          - name: label_de
+            type: string
+            format: default
+          - name: label
+            type: string
+            format: default
+
+    # ===============================================
+    # Datasets
+    # ===============================================
+    -
+      run: add_resource
+      parameters:
+        name: datasets
+        format: csv
+        url: https://raw.githubusercontent.com/kwenzig/soep-core/master/metadata/datasets.csv
+        schema:
+          fields:
+          - name: study
+            type: string
+            format: default
+          - name: dataset
+            type: string
+            format: default
+            constraints:
+              required: true
+          - name: period
+            type: string
+            format: default
+          - name: analysis_unit
+            type: string
+            format: default
+          - name: conceptual_dataset
+            type: string
+            format: default
+          - name: label
+            type: string
+            format: default
+          - name: description
+            type: string
+            format: default
+
+    # ===============================================
+    # Generations
+    # ===============================================
+    - run: add_resource
+      parameters:
+        name: generations
+        format: csv
+        url: https://raw.githubusercontent.com/kwenzig/soep-core/master/metadata/generations.csv
+        schema:
+          fields:
+          - name: input_study
+            type: string
+            format: default
+
+          - name: input_dataset
+            type: string
+            format: default
+
+          - name: input_version
+            type: string
+            format: default
+
+          - name: input_variable
+            type: string
+            format: default
+
+          - name: output_study
+            type: string
+            format: default
+
+          - name: output_dataset
+            type: string
+            format: default
+
+          - name: output_version
+            type: string
+            format: default
+
+          - name: output_variable
+            type: string
+            format: default
+
+    # ===============================================
+    # Questions
+    # ===============================================
+    -
+      run: add_resource
+      parameters:
+        name: questions
+        format: csv
+        url: https://raw.githubusercontent.com/kwenzig/soep-core/master/metadata/questions.csv
+        schema:
+          fields:
+          - name: study
+            type: string
+            format: default
+          - name: questionnaire
+            type: string
+            format: default
+          - name: question
+            type: string
+            format: default
+
+          - name: item
+            type: string
+            format: default
+
+          - name: template.id
+            type: string
+            format: default
+          - name: text_de
+            type: string
+            format: default
+          - name: instruction_de
+            type: string
+            format: default
+          - name: text
+            type: string
+            format: default
+          - name: instruction
+            type: string
+            format: default
+          - name: scale
+            type: string
+            format: default
+          - name: answer_list
+            type: string
+            format: default
+          - name: concept
+            type: string
+            format: default
+          - name: filter
+            type: string
+            format: default
+          - name: goto
+            type: string
+            format: default
+          - name: description
+            type: string
+            format: default
+          - name: number
+            type: string
+            format: default
+
+    # ===============================================
+    # Questionnaires
+    # ===============================================
+    -
+      run: add_resource
+      parameters:
+        name: questionnaires
+        format: csv
+        url: https://raw.githubusercontent.com/kwenzig/soep-core/master/metadata/questionnaires.csv
+        schema:
+          fields:
+          - name: study
+            type: string
+            format: default
+
+          - name: questionnaire
+            type: string
+            format: default
+
+          - name: label
+            type: string
+            format: default
+
+          - name: description
+            type: string
+            format: default
+
+          - name: analysis_unit
+            type: string
+            format: default
+
+          - name: period
+            type: string
+            format: default
+
+          - name: dataset
+            type: string
+            format: default
+
+          - name: author
+            type: string
+            format: default
+
+          - name: label_de
+            type: string
+            format: default
+
+          - name: description_de
+            type: string
+            format: default
+
+          - name: publish
+            type: string
+            format: default
+          - name: qtyp
+
+            type: string
+            format: default
+
+    # ===============================================
+    # Topics
+    # ===============================================
+    -
+      run: add_resource
+      parameters:
+        name: topics
+        format: csv
+        url: https://raw.githubusercontent.com/kwenzig/soep-core/master/metadata/topics.csv
+        schema:
+          fields:
+            - name: parent_old
+              type: string
+              format: default
+            - name: topic_old
+              type: string
+              format: default
+            - name: label
+              type: string
+              format: default
+            - name: topic
+              type: string
+              format: default
+            - name: parent
+              type: string
+              format: default
+
+
+    # ===============================================
+    # Variables
+    # ===============================================
+    -
+      run: add_resource
+      parameters:
+        name: variables
+        format: csv
+        url: https://raw.githubusercontent.com/kwenzig/soep-core/master/metadata/variables.csv
+        schema:
+          fields:
+            - name: study
+              type: string
+              format: default
+            - name: dataset
+              type: string
+              format: default
+            - name: varname
+              type: string
+              format: default
+              constraints:
+                required: true
+            - name: concept
+              type: string
+              format: default
+            - name: source
+              type: string
+              format: default
+            - name: item_id
+              type: string
+              format: default
+            - name: ID
+              type: string
+              format: default
+
+    # ===============================================
+    # Get data
+    # ===============================================
+
+    - run: stream_remote_resources
+      cache: True
+
+
+    # ===============================================
+    # Validation with goodtables-py
+    # write reports
+    # ===============================================
+    -
+      run: goodtables.validate
+      parameters:
+        fail_on_error: True
+        reports_path: 'reports'  # where reports will be written
+        datapackage_reports_path: 'reports'  # relative to datapackage.json
+        write_report: True
+
+        goodtables:
+          row_limit: -1
+          preset: 'table'
+
+
+    # ===============================================
+    # add created timestamp
+    # ===============================================
+
+    -
+      run: processors.add_created
+
+    # ===============================================
+    # Write datapackage to disk
+    # ===============================================
+    -
+      run: dump.to_path
+      parameters:
+        out-path: 'soep-core'
+        pretty-descriptor: true

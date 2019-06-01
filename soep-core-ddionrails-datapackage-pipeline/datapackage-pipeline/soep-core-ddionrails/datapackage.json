@@ -1,0 +1,438 @@
+{
+  "bytes": 5920617,
+  "count_of_rows": 100116,
+  "created": "2018-08-17T16:03:21.266299+02:00",
+  "hash": "163358cd1e5e69dcf16de5dc7680c118",
+  "homepage": "https://www.diw.de/en/diw_01.c.572844.en/1984_2016_v33.html",
+  "name": "soep-core-ddionrails",
+  "reports": [
+    {
+      "path": "reports/concepts.json",
+      "reportType": "goodtables",
+      "resource": "concepts"
+    },
+    {
+      "path": "reports/datasets.json",
+      "reportType": "goodtables",
+      "resource": "datasets"
+    },
+    {
+      "path": "reports/questions_variables.json",
+      "reportType": "goodtables",
+      "resource": "questions_variables"
+    },
+    {
+      "path": "reports/variables.json",
+      "reportType": "goodtables",
+      "resource": "variables"
+    },
+    {
+      "path": "reports/studies.json",
+      "reportType": "goodtables",
+      "resource": "studies"
+    }
+  ],
+  "resources": [
+    {
+      "bytes": 759124,
+      "count_of_rows": 7809,
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "https://raw.githubusercontent.com/paneldata/soep-core/master/ddionrails/concepts.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "1a2e77d3bdd949843055080e1b94c5c0",
+      "name": "concepts",
+      "path": "data/concepts.csv",
+      "primaryKeys": [
+        "concept_name"
+      ],
+      "schema": {
+        "fields": [
+          {
+            "constraints": {
+              "required": true
+            },
+            "description": "The identifier of the concept. (REQUIRED, PK, LOWERCASE)",
+            "name": "concept_name",
+            "title": "Concept",
+            "type": "string"
+          },
+          {
+            "description": "The identifier of the corresponding topic.",
+            "name": "topic",
+            "title": "Topic",
+            "type": "string"
+          },
+          {
+            "description": "The identifier of the corresponding topic.",
+            "name": "topic_prefix",
+            "title": "Topic prefix",
+            "type": "string"
+          },
+          {
+            "constraints": {
+              "required": true
+            },
+            "description": "The german label of the concept. (REQUIRED)",
+            "name": "label_de",
+            "title": "Label (german)",
+            "type": "string"
+          },
+          {
+            "constraints": {
+              "required": true
+            },
+            "description": "The english label of of the concept. (REQUIRED)",
+            "name": "label",
+            "title": "Label (english)",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "bytes": 27434,
+      "count_of_rows": 409,
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "https://raw.githubusercontent.com/paneldata/soep-core/master/ddionrails/datasets.csv",
+      "encoding": "utf-8",
+      "foreignKeys": [
+        {
+          "fields": "study_name",
+          "reference": {
+            "fields": "study",
+            "resource": "studies"
+          }
+        }
+      ],
+      "format": "csv",
+      "hash": "6c9eaf3ea225ef0e649325a8f98bff2b",
+      "name": "datasets",
+      "path": "data/datasets.csv",
+      "primaryKeys": [
+        "study_name",
+        "dataset_name"
+      ],
+      "schema": {
+        "fields": [
+          {
+            "constraints": {
+              "required": true
+            },
+            "description": "The identifier of the corresponding study. (REQUIRED, PK, LOWERCASE)",
+            "name": "study_name",
+            "title": "Study",
+            "type": "string"
+          },
+          {
+            "constraints": {
+              "required": true,
+              "unique": true
+            },
+            "description": "The identifier of the dataset. (REQUIRED, PK, LOWERCASE)",
+            "name": "dataset_name",
+            "title": "Dataset",
+            "type": "string"
+          },
+          {
+            "constraints": {
+              "required": true
+            },
+            "description": "The period of the dataset. (REQUIRED)",
+            "name": "period_name",
+            "title": "Period",
+            "type": "string"
+          },
+          {
+            "constraints": {
+              "enum": [
+                "h",
+                "p"
+              ],
+              "required": true
+            },
+            "description": "The analysis unit of the dataset. (REQUIRED)",
+            "name": "analysis_unit_name",
+            "title": "Analysis unit",
+            "type": "string"
+          },
+          {
+            "constraints": {
+              "enum": [
+                "bio/gen",
+                "gen",
+                "org/gross",
+                "org/net",
+                "survey",
+                "track"
+              ],
+              "required": true
+            },
+            "description": "The conceptual dataset of the dataset. (REQUIRED)",
+            "name": "conceptual_dataset_name",
+            "title": "Conceptual dataset",
+            "type": "string"
+          },
+          {
+            "constraints": {
+              "required": true
+            },
+            "description": "The english label of the dataset. (REQUIRED)",
+            "name": "label",
+            "title": "Label (english)",
+            "type": "string"
+          },
+          {
+            "description": "The english description of the dataset.",
+            "name": "description",
+            "title": "Description (english)",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "bytes": 1062800,
+      "count_of_rows": 24608,
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "https://raw.githubusercontent.com/paneldata/soep-core/master/ddionrails/questions_variables.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "3135122023517cb4a12af9dd11fc5079",
+      "name": "questions_variables",
+      "path": "data/questions_variables.csv",
+      "schema": {
+        "fields": [
+          {
+            "constraints": {
+              "required": true
+            },
+            "description": "The identifier of the corresponding study. (REQUIRED, FK, LOWERCASE)",
+            "name": "study_name",
+            "title": "Study",
+            "type": "string"
+          },
+          {
+            "constraints": {
+              "required": true
+            },
+            "description": "The identifier of the corresponding dataset. (REQUIRED, FK, LOWERCASE)",
+            "name": "dataset_name",
+            "title": "Dataset",
+            "type": "string"
+          },
+          {
+            "constraints": {
+              "required": true
+            },
+            "description": "The identifier of the corresponding variable. (REQUIRED, FK, LOWERCASE)",
+            "name": "variable_name",
+            "title": "Variable",
+            "type": "string"
+          },
+          {
+            "constraints": {
+              "required": true
+            },
+            "description": "The identifier of the correspoding question. (REQUIRED)",
+            "name": "question_name",
+            "title": "Question",
+            "type": "string"
+          },
+          {
+            "constraints": {
+              "required": true
+            },
+            "description": "The identifier of the corresponding instrument. (REQUIRED, LOWERCASE)",
+            "name": "instrument_name",
+            "title": "Instrument",
+            "type": "string"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "fields": "study_name",
+            "reference": {
+              "fields": "study",
+              "resource": "studies"
+            }
+          },
+          {
+            "fields": "dataset_name",
+            "reference": {
+              "fields": "dataset_name",
+              "resource": "datasets"
+            }
+          },
+          {
+            "fields": "variable_name",
+            "reference": {
+              "fields": "variable_name",
+              "resource": "variables"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "bytes": 4071241,
+      "count_of_rows": 67289,
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "https://raw.githubusercontent.com/paneldata/soep-core/master/ddionrails/variables.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "95979edff8ef426f6193348657408d19",
+      "name": "variables",
+      "path": "data/variables.csv",
+      "schema": {
+        "fields": [
+          {
+            "constraints": {
+              "required": true
+            },
+            "description": "The identifier of the corresponding study. (REQUIRED, PK, FK, LOWERCASE)",
+            "name": "study_name",
+            "title": "Study",
+            "type": "string"
+          },
+          {
+            "constraints": {
+              "required": true
+            },
+            "description": "The identifier of the corresponding dataset. (REQUIRED, PK, FK, LOWERCASE)",
+            "name": "dataset_name",
+            "title": "Dataset",
+            "type": "string"
+          },
+          {
+            "constraints": {
+              "required": true
+            },
+            "description": "The identifier of the variable. (REQUIRED, PK, LOWERCASE)",
+            "name": "variable_name",
+            "title": "Variable",
+            "type": "string"
+          },
+          {
+            "description": "The identifier of the corresponding concept. (FK, LOWERCASE)",
+            "name": "concept_name",
+            "title": "Concept",
+            "type": "string"
+          },
+          {
+            "constraints": {
+              "required": true
+            },
+            "description": "The identifier of the corresponding source. (REQUIRED)",
+            "name": "source",
+            "title": "Source",
+            "type": "string"
+          },
+          {
+            "description": "TODO",
+            "name": "item_id",
+            "title": "Item ID",
+            "type": "string"
+          },
+          {
+            "constraints": {
+              "required": true
+            },
+            "description": "TODO",
+            "name": "ID",
+            "title": "ID",
+            "type": "string"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "fields": "study_name",
+            "reference": {
+              "fields": "study",
+              "resource": "studies"
+            }
+          },
+          {
+            "fields": "dataset_name",
+            "reference": {
+              "fields": "dataset_name",
+              "resource": "datasets"
+            }
+          },
+          {
+            "fields": "concept_name",
+            "reference": {
+              "fields": "concept_name",
+              "resource": "concepts"
+            }
+          }
+        ],
+        "primaryKeys": [
+          "study_name",
+          "dataset_name",
+          "variable_name"
+        ]
+      }
+    },
+    {
+      "bytes": 18,
+      "count_of_rows": 1,
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "https://git.soep.de/hfuetterer/studies/raw/master/studies.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "341c8652211f07607e698bff40ae1a2d",
+      "name": "studies",
+      "path": "data/studies.csv",
+      "schema": {
+        "fields": [
+          {
+            "constraints": {
+              "required": true,
+              "unique": true
+            },
+            "description": "The identifier of the study. (REQUIRED, PK, LOWERCASE)",
+            "name": "study",
+            "title": "Study",
+            "type": "string"
+          }
+        ],
+        "primaryKeys": [
+          "study"
+        ]
+      }
+    }
+  ],
+  "title": "soep-core-ddionrails",
+  "version": "33.0.0"
+}

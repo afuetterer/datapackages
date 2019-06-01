@@ -1,0 +1,557 @@
+{
+  "bytes": 24416325,
+  "count_of_rows": 398217,
+  "created": "2018-08-10T16:46:13.884129+02:00",
+  "hash": "79f2af175451b0fc19f51cc20f07800e",
+  "homepage": "http://soep-core.org/",
+  "name": "soep-core",
+  "reports": [
+    {
+      "path": "reports/answers.json",
+      "reportType": "goodtables",
+      "resource": "answers"
+    },
+    {
+      "path": "reports/concepts.json",
+      "reportType": "goodtables",
+      "resource": "concepts"
+    },
+    {
+      "path": "reports/datasets.json",
+      "reportType": "goodtables",
+      "resource": "datasets"
+    },
+    {
+      "path": "reports/generations.json",
+      "reportType": "goodtables",
+      "resource": "generations"
+    },
+    {
+      "path": "reports/questions.json",
+      "reportType": "goodtables",
+      "resource": "questions"
+    },
+    {
+      "path": "reports/questionnaires.json",
+      "reportType": "goodtables",
+      "resource": "questionnaires"
+    },
+    {
+      "path": "reports/topics.json",
+      "reportType": "goodtables",
+      "resource": "topics"
+    },
+    {
+      "path": "reports/variables.json",
+      "reportType": "goodtables",
+      "resource": "variables"
+    }
+  ],
+  "resources": [
+    {
+      "bytes": 34823,
+      "count_of_rows": 347,
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "https://raw.githubusercontent.com/kwenzig/soep-core/master/metadata/answers.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "0de12814182cfd71fc06f1a5f58e0ccb",
+      "name": "answers",
+      "path": "data/answers.csv",
+      "schema": {
+        "fields": [
+          {
+            "format": "default",
+            "name": "study",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "questionnaire",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "answer_list",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "value",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "label_de",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "label",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "bytes": 758141,
+      "count_of_rows": 7801,
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "https://raw.githubusercontent.com/kwenzig/soep-core/master/metadata/concepts.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "ef73614e66e1c4ab504458f7e4f66f73",
+      "name": "concepts",
+      "path": "data/concepts.csv",
+      "schema": {
+        "fields": [
+          {
+            "format": "default",
+            "name": "concept",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "topic",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "topic_prefix",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "label_de",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "label",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "bytes": 27409,
+      "count_of_rows": 409,
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "https://raw.githubusercontent.com/kwenzig/soep-core/master/metadata/datasets.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "34b3ffbd224a502f69d2b80d3aa28759",
+      "name": "datasets",
+      "path": "data/datasets.csv",
+      "schema": {
+        "fields": [
+          {
+            "format": "default",
+            "name": "study",
+            "type": "string"
+          },
+          {
+            "constraints": {
+              "required": true
+            },
+            "format": "default",
+            "name": "dataset",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "period",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "analysis_unit",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "conceptual_dataset",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "label",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "description",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "bytes": 19400328,
+      "count_of_rows": 320255,
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "https://raw.githubusercontent.com/kwenzig/soep-core/master/metadata/generations.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "2db4b211c2d26d4d2ad8af62ee78921d",
+      "name": "generations",
+      "path": "data/generations.csv",
+      "schema": {
+        "fields": [
+          {
+            "format": "default",
+            "name": "input_study",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "input_dataset",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "input_version",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "input_variable",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "output_study",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "output_dataset",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "output_version",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "output_variable",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "bytes": 144591,
+      "count_of_rows": 805,
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "https://raw.githubusercontent.com/kwenzig/soep-core/master/metadata/questions.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "34567d5a6a657040b32a0670dc2c09cf",
+      "name": "questions",
+      "path": "data/questions.csv",
+      "schema": {
+        "fields": [
+          {
+            "format": "default",
+            "name": "study",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "questionnaire",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "question",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "item",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "template.id",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "text_de",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "instruction_de",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "text",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "instruction",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "scale",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "answer_list",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "concept",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "filter",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "goto",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "number",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "bytes": 297,
+      "count_of_rows": 2,
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "https://raw.githubusercontent.com/kwenzig/soep-core/master/metadata/questionnaires.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "4477d052bb1a364587e6f6ebf461addf",
+      "name": "questionnaires",
+      "path": "data/questionnaires.csv",
+      "schema": {
+        "fields": [
+          {
+            "format": "default",
+            "name": "study",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "questionnaire",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "label",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "analysis_unit",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "period",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "dataset",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "author",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "label_de",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "description_de",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "publish",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "qtyp",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "bytes": 27747,
+      "count_of_rows": 392,
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "https://raw.githubusercontent.com/kwenzig/soep-core/master/metadata/topics.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "f0d1da902c8e429cffda17341788edad",
+      "name": "topics",
+      "path": "data/topics.csv",
+      "schema": {
+        "fields": [
+          {
+            "format": "default",
+            "name": "parent_old",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "topic_old",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "label",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "topic",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "parent",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "bytes": 4022989,
+      "count_of_rows": 68206,
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "https://raw.githubusercontent.com/kwenzig/soep-core/master/metadata/variables.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "67929e9f501f3e924e82b1966ed141e0",
+      "name": "variables",
+      "path": "data/variables.csv",
+      "schema": {
+        "fields": [
+          {
+            "format": "default",
+            "name": "study",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "dataset",
+            "type": "string"
+          },
+          {
+            "constraints": {
+              "required": true
+            },
+            "format": "default",
+            "name": "varname",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "concept",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "source",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "item_id",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "ID",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ],
+  "title": "soep-core"
+}
